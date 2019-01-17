@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<entities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation='entity.xsd'>
+    <entity name="User" table="mkuser">
+        <attribute name="User Identifier" column="UserPK">
+            <type>number</type>
+            <accepted_values>[0-9]{1,20}</accepted_values>
+        </attribute>
+        <attribute name="Username" column="UserID">
+            <type>string</type>
+            <accepted_values>.*</accepted_values>
+        </attribute>
+        <attribute name="Account Type" column="UserID">
+            <type>enum</type>
+            <accepted_values>
+                <item value="0">Administrator / Advisor</item>
+                <item value="1">Advisor</item>
+                <item value="2">Administrator</item>
+            </accepted_values>
+        </attribute>
+    </entity>
+</entities>
